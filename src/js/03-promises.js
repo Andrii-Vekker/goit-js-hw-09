@@ -19,7 +19,8 @@ function createPromisesOnSubmit(event) {
 
 function countPromises(count, delay, step) {
   for (let i = 1; i <= count; i += 1) {
-    let time = delay + step * (i-1);
+    let time = delay + step * (i -1);
+    console.log(time)
     createPromise(i, time)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`, {
